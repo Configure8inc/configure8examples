@@ -1,4 +1,8 @@
 {
+  "name": "configure8examples",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Home for public api usage examples",
   "scripts": {
     "service:create": "node demos/create-service.js",
     "service:create:it": "node demos/create-service-interactive.js"
