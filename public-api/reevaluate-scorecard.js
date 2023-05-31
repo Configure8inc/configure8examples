@@ -23,7 +23,7 @@ function reevaluateScorecard(scorecardId, apiKey) {
     res.on("end", () => {
       const result = JSON.parse(response);
       if (result.error) {
-        console.error("Error creating service: ", result.message);
+        console.error("Error reevaluating scorecard: ", result.message);
       } else {
         console.log(`Scorecard re-evaluation started successfully`);
         console.log(`For checking the status of the scorecard, please visit: https://app.configure8.io/scorecards/${scorecardId}/overview`);

@@ -36,7 +36,7 @@ function attachMetadataToService(serviceId, apiKey) {
     res.on("end", () => {
       const result = JSON.parse(response);
       if (result.error) {
-        console.error("Error creating service: ", result.message);
+        console.error("Error adding service metadata: ", result.message);
       } else {
         console.log(`Metadata attached successfully`);
         console.log(`Now you can create a scorecard and use the pre-defined metadata tags to add some checks to your scorecard.`);
