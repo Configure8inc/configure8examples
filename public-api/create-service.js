@@ -81,7 +81,7 @@ function createServiceExample(apiKey) {
     res.on("end", () => {
       const result = JSON.parse(response);
 
-      if(result.error) {
+      if (result.error) {
         console.error("Error creating service: ", result.message.join(", "));
       } else {
         console.info("Service created successfully");
