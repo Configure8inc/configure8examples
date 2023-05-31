@@ -1,0 +1,11 @@
+{
+  "name": "configure8examples",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Home for configure8 API examples",
+  "scripts": {
+    "pa:service:metadata": "node public-api/attach-metadata-to-service.js",
+    "pa:scorecard:re": "node public-api/reevaluate-scorecard.js"
+  },
+  "type": "module"
+}
