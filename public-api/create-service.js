@@ -2,7 +2,7 @@ import https from "https";
 
 function createServiceExample(apiKey) {
   const data = JSON.stringify({
-    name: "exampleServiceName6",
+    name: "exampleServiceName",
     lifecycle: "",
     tags: [
       "Production",
@@ -59,7 +59,7 @@ function createServiceExample(apiKey) {
   });
 
   const options = {
-    hostname: "qa.configure8.io",
+    hostname: "app.configure8.io",
     path: "/public/v1/catalog/entities/service",
     method: "POST",
     headers: {
@@ -87,7 +87,7 @@ function createServiceExample(apiKey) {
         console.info("Service created successfully");
         console.info("Service ID: ", result.id);
         console.info("Service Name: ", result.name);
-        console.log(`Your service is available at: https://qa.configure8.io/services/${result.id}/overview`)
+        console.log(`Your service is available at: https://app.configure8.io/services/${result.id}/overview`)
       }
     });
   });
@@ -100,4 +100,4 @@ function createServiceExample(apiKey) {
   req.end();
 }
 
-createServiceExample("c8ak_6efb3071a5a64217872415497db92649_5e69ce7")
+createServiceExample("YOUR_API_KEY")
