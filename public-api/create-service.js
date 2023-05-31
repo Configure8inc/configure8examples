@@ -2,7 +2,7 @@ import https from "https";
 
 function createServiceExample(apiKey) {
   const data = JSON.stringify({
-    name: "exampleServiceName",
+    name: "exampleServiceName6",
     lifecycle: "",
     tags: [
       "Production",
@@ -30,9 +30,9 @@ function createServiceExample(apiKey) {
       },
       {
         name: "Sample Json",
-        value: {
-          key: "value"
-        },
+        value: JSON.stringify({
+          "key": "value"
+        }),
         type: "JSON"
       },
       {
@@ -71,10 +71,24 @@ function createServiceExample(apiKey) {
   };
 
   const req = https.request(options, (res) => {
-    console.log(`statusCode: ${res.statusCode}`);
+    const status = res.statusCode;
+    let response = "";
 
     res.on("data", (d) => {
-      process.stdout.write(d);
+      response += d;
+    });
+
+    res.on("end", () => {
+      const result = JSON.parse(response);
+
+      if(result.error) {
+        console.error("Error creating service: ", result.message.join(", "));
+      } else {
+        console.info("Service created successfully");
+        console.info("Service ID: ", result.id);
+        console.info("Service Name: ", result.name);
+        console.log(`Your service is available at: https://qa.configure8.io/services/${result.id}/overview`)
+      }
     });
   });
 
@@ -86,4 +100,4 @@ function createServiceExample(apiKey) {
   req.end();
 }
 
-createServiceExample("YOUR_API_KEY")
+createServiceExample("c8ak_6efb3071a5a64217872415497db92649_5e69ce7")
