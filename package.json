@@ -6,6 +6,8 @@
   "scripts": {
     "pa:service:metadata": "node public-api/attach-metadata-to-service.js",
     "pa:scorecard:re": "node public-api/reevaluate-scorecard.js",
+    "pa:scorecard:status": "node public-api/scorecard-status.js",
+    "pa:scorecard": "node public-api/get-scorecard.js",
     "pa:service:create": "node public-api/create-service.js"
   },
   "type": "module"
