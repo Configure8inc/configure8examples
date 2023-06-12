@@ -48,4 +48,4 @@ function checkScorecardStatus(scorecardId, apiKey) {
   req.end();
 }
 
-checkScorecardStatus("SCORECARD_ID", "API_KEY");
+checkScorecardStatus("SCORECARD_ID", "YOUR_API_KEY");
