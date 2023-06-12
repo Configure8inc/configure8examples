@@ -17,7 +17,7 @@ This repository contains five different examples. Each script has a function cal
 
 ### 1. Attach Metadata to Service
 
-This script demonstrates how to attach metadata to a service. Replace `"SERVICE_ID"` and `"API_KEY"` with your actual service ID and API key.
+This script demonstrates how to attach metadata to a service. Replace `"SERVICE_ID"` and `"YOUR_API_KEY"` with your actual service ID and API key.
 
 You can run this script with the following command:
 
@@ -54,7 +54,7 @@ Your service is available at: https://app.configure8.io/services/<service_id>/ov
 
 ### 3. Get Scorecard
 
-This script demonstrates how to retrieve a scorecard. Replace `"SERVICE_ID"`, `"SCORECARD_NAME"`, and `"API_KEY"` with your actual service ID, scorecard name, and API key.
+This script demonstrates how to retrieve a scorecard. Replace `"SERVICE_ID"`, `"SCORECARD_NAME"`, and `"YOUR_API_KEY"` with your actual service ID, scorecard name, and API key.
 
 You can run this script with the following command:
 
@@ -66,7 +66,7 @@ Upon successful execution, this script will output the details of the scorecards
 
 ### 4. Reevaluate Scorecard
 
-This script demonstrates how to reevaluate a scorecard. Replace `"SCORECARD_ID"` and `"API_KEY"` with your actual scorecard ID and API key.
+This script demonstrates how to reevaluate a scorecard. Replace `"SCORECARD_ID"` and `"YOUR_API_KEY"` with your actual scorecard ID and API key.
 
 You can run this script with the following command:
 
@@ -84,7 +84,7 @@ Also you can wait a couple of minutes and check the scorecard status by running 
 
 ### 5. Check Scorecard Status
 
-This script demonstrates how to check the status of a scorecard. Replace `"SCORECARD_ID"` and `"API_KEY"` with your actual scorecard ID and API key.
+This script demonstrates how to check the status of a scorecard. Replace `"SCORECARD_ID"` and `"YOUR_API_KEY"` with your actual scorecard ID and API key.
 
 You can run this script with the following command:
 
