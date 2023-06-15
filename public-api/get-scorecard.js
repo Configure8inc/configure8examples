@@ -61,4 +61,4 @@ function getScorecard(serviceId, name, apiKey) {
  * @param {string} name - Filter scorecards by name (optional)
  * @param {string} apiKey - API Key
  */
-getScorecard("SERVICE_ID", "SCORECARD_NAME", "API_KEY");
+getScorecard("SERVICE_ID", "SCORECARD_NAME", "YOUR_API_KEY");

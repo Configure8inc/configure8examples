@@ -53,4 +53,4 @@ function attachMetadataToService(serviceId, apiKey) {
   req.end();
 }
 
-attachMetadataToService("SERVICE_ID", "API_KEY");
+attachMetadataToService("SERVICE_ID", "YOUR_API_KEY");

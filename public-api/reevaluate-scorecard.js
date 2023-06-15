@@ -39,4 +39,4 @@ function reevaluateScorecard(scorecardId, apiKey) {
   req.end();
 }
 
-reevaluateScorecard("SCORECARD_ID", "API_KEY");
+reevaluateScorecard("SCORECARD_ID", "YOUR_API_KEY");
