@@ -1,6 +1,6 @@
 # Configure8 API Examples
 
-This repository contains examples of how to interact with the Configure8 public APIs. There are five different examples, each demonstrating a different aspect of the API.
+This repository contains examples of how to interact with the Configure8 public APIs. There are six different examples, each demonstrating a different aspect of the API.
 
 ## Installation
 
@@ -93,3 +93,16 @@ npm run pa:scorecard:status
 ```
 
 Upon successful execution, this script will output the status of the specified scorecard.
+
+
+### 6. Get Catalog Relations
+
+This script retrieves relations from a remote API using HTTPS. It takes three parameters: `YOUR_API_KEY`, `SOURCE_ENTITY_ID`, and `TARGET_ENTITY_ID`. You should replace these parameters with your actual API key, source entity ID, and target entity ID. Except for the API key, the other two parameters are optional. If you don't provide `SOURCE_ENTITY_ID`, the script will retrieve all relations for the specified target entity. If you don't provide `TARGET_ENTITY_ID`, the script will retrieve all relations for the specified source entity. If you don't provide either of these parameters, the script will retrieve all relations for all entities. Also you can provide the `pageSize` and `pageNumber` (starts from 0) parameters to paginate the results.
+
+You can run this script with the following command:
+
+```bash
+npm run pa:catalog:relations
+```
+
+Upon successful execution, this script will output the relations that match the provided parameters.
