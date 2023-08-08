@@ -1,6 +1,6 @@
 # Configure8 API Examples
 
-This repository contains examples of how to interact with the Configure8 public APIs. There are six different examples, each demonstrating a different aspect of the API.
+This repository contains examples of how to interact with the Configure8 public APIs. There are seven different examples, each demonstrating a different aspect of the API.
 
 ## Installation
 
@@ -13,7 +13,7 @@ cd configure8examples
 
 ## Usage
 
-This repository contains five different examples. Each script has a function call at the end, where you need to replace the placeholders with your actual values.
+This repository contains seven different examples. Each script has a function call at the end, where you need to replace the placeholders with your actual values.
 
 ### 1. Attach Metadata to Service
 
@@ -106,3 +106,24 @@ npm run pa:catalog:relations
 ```
 
 Upon successful execution, this script will output the relations that match the provided parameters.
+
+### 7. Create Custom Resources
+
+This script demonstrates how to create new custom resources on mock data of VMware VMs. Replace `"YOUR_API_KEY"` with your actual API key.
+
+You can run this script with the following command:
+
+```bash
+npm run pa:resource:create
+```
+
+Upon successful execution, this script will output similar result:
+
+```
+4 resources created successfully
+0 resources failed to be created
+vm-1 resource created successfully with id 2d5d44ee-9ac9-4056-ac8a-f85ff576454a
+vm-2 resource created successfully with id 95c2de3f-4a93-41c4-abd4-1bc45e35b89e
+vm-3 resource created successfully with id 065f9533-85e2-45e6-a93a-7e7a6e7bffaf
+vm-4 resource created successfully with id d5afb2ba-7eb0-4096-afb9-43b1e7ef0375
+```
