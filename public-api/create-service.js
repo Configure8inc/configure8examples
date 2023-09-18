@@ -1,3 +1,4 @@
+import { randomUUID } from "crypto";
 import https from "https";
 
 function createServiceExample(apiKey) {
@@ -13,13 +14,12 @@ function createServiceExample(apiKey) {
       "js",
       "ts"
     ],
-    owners: [],
     applications: [],
     links: [
       {
         url: "https://app.configure8.io",
         title: "Configure8",
-        icon: "configure8"
+        icon: "documentation"
       }
     ],
     metaTags: [
@@ -71,7 +71,7 @@ function createServiceExample(apiKey) {
   };
 
   const req = https.request(options, (res) => {
-    const status = res.statusCode;
+
     let response = "";
 
     res.on("data", (d) => {
@@ -87,7 +87,64 @@ function createServiceExample(apiKey) {
         console.info("Service created successfully");
         console.info("Service ID: ", result.id);
         console.info("Service Name: ", result.name);
-        console.log(`Your service is available at: https://app.configure8.io/services/${result.id}/overview`)
+        // adding simple plugin - embedded view
+        const serviceId = result.id;
+
+        const pluginData = JSON.stringify({
+          credentialId: randomUUID(),
+          configuration: [
+            {
+              name: 'url',
+              value: ['https://docs.configure8.io/configure8-product-docs/reference/api-documentation'],
+            },
+          ],
+          layout: { h: 0, w: 0, x: 0, y: 0 },
+          providerName: 'EmbeddedView',
+          providerType: 'OTHER',
+          serviceId: serviceId, 
+          status: 'ACTIVE',
+          title: 'EmbeddedViewExample',
+          uiPluginName: 'embedded_view',
+        });
+
+        const plugin = {
+          hostname: "app.configure8.io",
+          path: "/public/v1/module-settings",
+          method: "POST",
+          headers: {
+            "api-key": apiKey,
+            "Content-Type": "application/json",
+            "User-Agent": "Configure8",
+            "Content-Length": pluginData.length
+          }
+        };
+
+        const pluginRequest = https.request(plugin, (res) => {
+          let response = ""; 
+
+          res.on("data", (d) => {
+            response += d;
+          });
+
+          res.on("end", () => {
+            const result = JSON.parse(response);
+
+            if (result.error) {
+              console.error("Error creating service plugin: ", result.message.join(", "));
+            } else {
+              console.info("Service plugin created successfully");
+              console.info("Service plugin ID: ", result.id);
+              console.info("Service plugin Name: ", result.providerName);
+            }
+          });
+        });
+
+        pluginRequest.on("error", (error) => {
+          console.error(error);
+        });
+
+        pluginRequest.write(pluginData);
+        pluginRequest.end();
       }
     });
   });
