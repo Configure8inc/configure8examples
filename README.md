@@ -36,6 +36,7 @@ For creating a scorecard, please visit: https://app.configure8.io/scorecards/cre
 ### 2. Create Service
 
 This script demonstrates how to create a new service. Replace `"YOUR_API_KEY"` with your actual API key.
+It also adds simple plugin to newly created service
 
 You can run this script with the following command:
 
