@@ -10,7 +10,11 @@
     "pa:scorecard:status": "node public-api/scorecard-status.js",
     "pa:scorecard": "node public-api/get-scorecard.js",
     "pa:service:create": "node public-api/create-service.js",
-    "pa:resource:create": "node public-api/create-custom-resource.js"
+    "pa:resource:create": "node public-api/create-custom-resource.js",
+    "pa:credentials:getAll": "node public-api/credentials/get-credentials.js",
+    "pa:credentials:create": "node public-api/credentials/create-credential.js",
+    "pa:credentials:delete": "node public-api/credentials/delete-credential.js",
+    "pa:credentials:update": "node public-api/credentials/update-credential.js"
   },
   "type": "module"
 }
