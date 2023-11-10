@@ -128,3 +128,21 @@ vm-2 resource created successfully with id 95c2de3f-4a93-41c4-abd4-1bc45e35b89e
 vm-3 resource created successfully with id 065f9533-85e2-45e6-a93a-7e7a6e7bffaf
 vm-4 resource created successfully with id d5afb2ba-7eb0-4096-afb9-43b1e7ef0375
 ```
+
+### 8. Create Deployment
+
+This script demonstrates how to create a new deployment. Replace `"YOUR_API_KEY"` with your actual API key.
+
+You can run this script with the following command:
+
+```bash
+npm run pa:deployment:create
+```
+
+Upon successful execution, this script will output:
+
+```
+Deployment created successfully
+Deployment ID: <deployment_id>
+Deployment Name: <deployment_name>
+```
