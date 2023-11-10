@@ -2,20 +2,20 @@ import https from "https";
 
 function createDeploymentExample(apiKey) {
   const data = JSON.stringify({
-        "name": "[XXX-1234]: Create a new deployment",
-        "description": "Added a new GA flow",
-        "repositoryId": "40d9714a-77fd-4ed6-9dfc-a80518035851",
-        "environment": "QA",
-        "status": "SUCCESS",
-        "sha": "e2d2632d3ae5b9e3d1ae332c03f4566e858b3a65",
-        "ref": "main",
-        "version": "1.31.0",
-        "login": "username",
-        "url": "https://circleci.com/deployment/pipelines/12",
-        "ownerEmail": "user@yourcompanydomain.io",
-        "startedAt": "2023-11-10T03:11:11.813Z",
-        "finishedAt": "2023-11-10T03:12:12.813Z"
-      });
+    "name": "[XXX-1234]: Create a new deployment",
+    "description": "Added a new GA flow",
+    "repositoryId": "40d9714a-77fd-4ed6-9dfc-a80518035851",
+    "environment": "QA",
+    "status": "SUCCESS",
+    "sha": "e2d2632d3ae5b9e3d1ae332c03f4566e858b3a65",
+    "ref": "main",
+    "version": "1.31.0",
+    "login": "username",
+    "url": "https://circleci.com/deployment/pipelines/12",
+    "ownerEmail": "user@yourcompanydomain.io",
+    "startedAt": "2023-11-10T03:11:11.813Z",
+    "finishedAt": "2023-11-10T03:12:12.813Z"
+  });
 
   const options = {
     hostname: "app.configure8.io",
