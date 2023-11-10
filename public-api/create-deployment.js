@@ -4,7 +4,7 @@ function createDeploymentExample(apiKey) {
   const data = JSON.stringify({
         "name": "[XXX-1234]: Create a new deployment",
         "description": "Added a new GA flow",
-        "repositoryId": "8c2ce201-daff-4ba6-a067-ee95e37a9e6a",
+        "repositoryId": "40d9714a-77fd-4ed6-9dfc-a80518035851",
         "environment": "QA",
         "status": "SUCCESS",
         "sha": "e2d2632d3ae5b9e3d1ae332c03f4566e858b3a65",
@@ -40,7 +40,7 @@ function createDeploymentExample(apiKey) {
       const result = JSON.parse(response);
 
       if (result.error) {
-        console.error("Error creating deployment: ", result.message.join(", "));
+        console.error(`Error creating deployment: ${result.message}`);
       } else {
         console.info("Deployment created successfully");
         console.info("Deployment ID: ", result.id);
