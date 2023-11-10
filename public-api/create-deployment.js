@@ -57,4 +57,4 @@ function createDeploymentExample(apiKey) {
   req.end();
 }
 
-createDeploymentExample("YOUR_API_KEY")
+createDeploymentExample("YOUR_API_KEY");
