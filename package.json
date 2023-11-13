@@ -10,7 +10,8 @@
     "pa:scorecard:status": "node public-api/scorecard-status.js",
     "pa:scorecard": "node public-api/get-scorecard.js",
     "pa:service:create": "node public-api/create-service.js",
-    "pa:resource:create": "node public-api/create-custom-resource.js"
+    "pa:resource:create": "node public-api/create-custom-resource.js",
+    "pa:deployment:create": "node public-api/create-deployment.js"
   },
   "type": "module"
 }
