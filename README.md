@@ -95,7 +95,6 @@ npm run pa:scorecard:status
 
 Upon successful execution, this script will output the status of the specified scorecard.
 
-
 ### 6. Get Catalog Relations
 
 This script retrieves relations from a remote API using HTTPS. It takes three parameters: `YOUR_API_KEY`, `SOURCE_ENTITY_ID`, and `TARGET_ENTITY_ID`. You should replace these parameters with your actual API key, source entity ID, and target entity ID. Except for the API key, the other two parameters are optional. If you don't provide `SOURCE_ENTITY_ID`, the script will retrieve all relations for the specified target entity. If you don't provide `TARGET_ENTITY_ID`, the script will retrieve all relations for the specified source entity. If you don't provide either of these parameters, the script will retrieve all relations for all entities. Also you can provide the `pageSize` and `pageNumber` (starts from 0) parameters to paginate the results.
@@ -145,4 +144,44 @@ Upon successful execution, this script will output:
 Deployment created successfully
 Deployment ID: <deployment_id>
 Deployment Name: <deployment_name>
+```
+
+### 9. Create Deploys and Incidents with relations in DF schemas with service relation
+
+This script demonstrates how to create deploys and incidents with a data flexibility schema and how to related them to each other and a service.
+
+If you haven't already, install the dependencies like this:
+
+``bash
+npm install
+
+````
+
+First, add a `.env.local` with your api key like this:
+
+```bash
+API_KEY=<YOUR API KEY HERE>
+````
+
+Then open up [the script here](public-api/create-df-deploys-incidents-with-service-relation.js), replacing out five fields at the top with your specific cases:
+
+```js
+// these should be the identifiers for your created schema
+const deploysSchema = "Deploys";
+const incidentsSchema = "Incidents";
+
+// these should be the names of the relations
+// this one should be the deploy -> incident relation name
+const deployIncidentField = "Incidents";
+// this one should be the deploy -> service relation name
+const deployServiceField = "ServiceDeploys";
+
+// only one service relation is supported in this script, but the idea of deploys being related to services is shown
+const relatedService = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+```
+
+Now that everything is configured, you can run the script like this:
+
+```bash
+npm run pa:df:deploys-incidents-complex
 ```
