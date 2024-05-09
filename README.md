@@ -152,16 +152,16 @@ This script demonstrates how to create deploys and incidents with a data flexibi
 
 If you haven't already, install the dependencies like this:
 
-``bash
+```bash
 npm install
 
-````
+```
 
 First, add a `.env.local` with your api key like this:
 
 ```bash
 API_KEY=<YOUR API KEY HERE>
-````
+```
 
 Then open up [the script here](public-api/create-df-deploys-incidents-with-service-relation.js), replacing out five fields at the top with your specific cases:
 
