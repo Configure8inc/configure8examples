@@ -12,7 +12,12 @@
     "pa:service:create": "node public-api/create-service.js",
     "pa:service:delete-all": "node public-api/delete-all-services.js",
     "pa:resource:create": "node public-api/create-custom-resource.js",
-    "pa:deployment:create": "node public-api/create-deployment.js"
+    "pa:deployment:create": "node public-api/create-deployment.js",
+    "pa:df:deploys-incidents-complex": "node create-df-deploys-incidents-with-service-relation.js"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.5"
+  }
 }
