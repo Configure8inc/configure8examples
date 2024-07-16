@@ -12,7 +12,6 @@
     "pa:service:create": "node public-api/create-service.js",
     "pa:service:delete-all": "node public-api/delete-all-services.js",
     "pa:resource:create": "node public-api/create-custom-resource.js",
-    "pa:deployment:create": "node public-api/create-deployment.js",
     "pa:df:deploys-incidents-complex": "node create-df-deploys-incidents-with-service-relation.js",
     "pa:credentials:getAll": "node public-api/credentials/get-credentials.js",
     "pa:credentials:create": "node public-api/credentials/create-credential.js",
