@@ -28,6 +28,16 @@ async function createDfDeploysIncidentsWithServiceRelations() {
       Array.from({ length: 1 }, (_, i) => ({
         name: `Deploy ${i + 1}`,
         providerResourceType: deploysSchema,
+        details: {
+          Description: "Lorem ipsum...",
+          Status: "Success",
+          Start: 1723554855,
+          Stop: 1724554855,
+          Duration: 200000,
+          Environment: "PROD",
+          Branch: "main",
+          Author: "jondoe@email.com"
+        }
       }))
     );
 
@@ -36,6 +46,12 @@ async function createDfDeploysIncidentsWithServiceRelations() {
       Array.from({ length: 1 }, (_, i) => ({
         name: `Incident ${i}`,
         providerResourceType: incidentsSchema,
+        details: {
+          Description: "Lorem ipsum...",
+          Start: 1723554855,
+          Stop: 1724554855,
+          Duration: 200000
+        }
       }))
     );
 
